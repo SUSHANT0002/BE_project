@@ -1,0 +1,84 @@
+.grid {
+  margin-top: 10px;
+}
+.gridRow {
+  display: inline-block;
+}
+
+.message-show {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+}
+.distance-count {
+  color: rgb(31, 209, 233);
+  font-size: 20px;
+  font-weight: 700;
+}
+.time-count {
+  color: rgb(31, 209, 233);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hide-card {
+  display: none;
+}
+.design-node {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid rgb(41, 120, 224);
+  padding-top: 5px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.card {
+  background: whitesmoke;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transition: ease-in-out;
+  background: white;
+  opacity: 0.95;
+}
+
+.card-header.title {
+  font-size: 28px;
+  color: #007bff;
+}
+
+.card-header a {
+  font-weight: bold;
+}
+
+.info-bar {
+  position: absolute;
+  z-index: 100;
+  width: 25%;
+
+  background: transparent;
+  left: 80%;
+  top: 9.5%;
+  border-radius: 5px;
+  max-width: 300px;
+}
+
+.info-bar .card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rotate {
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.rotate.down {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

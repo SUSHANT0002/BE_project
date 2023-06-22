@@ -1,0 +1,101 @@
+.node {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid rgb(41, 120, 224);
+  display: grid;
+}
+
+.node-weighted {
+  background-color: rgb(94, 91, 91);
+  background-image: url(weight.svg);
+}
+
+.node-wall {
+  background-color: rgb(247, 127, 147);
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.5);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(56, 196, 238, 0.5);
+  }
+
+  75% {
+    transform: scale(1.2);
+    background-color: rgba(63, 243, 195, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(89, 218, 238, 0.75);
+  }
+}
+
+.node-shortest-path {
+  animation-name: shortestPath;
+  animation-duration: 1.5 s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes shortestPath {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 106);
+  }
+}
+
+.node-finish {
+  background-color: rgb(247, 55, 55);
+}
+
+.node-start {
+  background-color: rgb(8, 248, 8);
+  /* background-image: url(start.jpg); */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.node-visited .node-weighted {
+  background-image: url(weight.svg);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.node-visited {
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
